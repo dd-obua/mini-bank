@@ -192,3 +192,7 @@ h4 {
   grid-row: 1 / span 4;
   transform: translateY(-6rem);
 }
+
+.highlight {
+  position: relative;
+}
