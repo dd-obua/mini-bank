@@ -8,10 +8,5 @@ btnScrollTo.addEventListener('click', function (e) {
   const horizontalOffset = window.pageXOffset;
   const verticalOffset = window.pageYOffset;
 
-  // Scroll to section 1
-  window.scrollTo({
-    left: s1coords.left + horizontalOffset,
-    top: s1coords.top + verticalOffset,
-    behavior: 'smooth',
-  });
+  section1.scrollIntoView({ behavior: 'smooth' });
 });
