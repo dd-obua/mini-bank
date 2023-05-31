@@ -1,5 +1,7 @@
 'use strict';
 
+const { log } = require('console');
+
 // Select elements
 console.log(document.documentElement);
 console.log(document.head);
@@ -58,3 +60,9 @@ console.log('Relative href:', link.getAttribute('href'));
 
 // Manuipulate data attributes
 console.log('Data version number:', logo.dataset.versionNumber);
+
+// Manipulate classes
+logo.classList.add('a', 'b');
+logo.classList.remove('b');
+logo.classList.toggle('c');
+logo.classList.contains('d');
