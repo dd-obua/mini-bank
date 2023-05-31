@@ -41,8 +41,8 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 // Manipulate attributes
 const logo = document.querySelector('.nav__logo');
 console.log('alt:', logo.alt);
-console.log('src:', logo.src);
-console.log('src:', logo.getAttribute('src'));
+console.log('Absolute src:', logo.src);
+console.log('Relative src:', logo.getAttribute('src'));
 console.log('class:', logo.className);
 console.log('id:', logo.id);
 console.log('designer:', logo.designer);
@@ -50,3 +50,8 @@ console.log('designer:', logo.getAttribute('designer'));
 
 logo.alt = 'Beautiful minimalist logo';
 logo.setAttribute('company', 'Bankist');
+console.log();
+
+const link = document.querySelector('.nav__link');
+console.log('Absolute href:', link.href);
+console.log('Relative href:', link.getAttribute('href'));
