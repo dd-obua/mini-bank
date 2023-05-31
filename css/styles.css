@@ -466,3 +466,13 @@ h4 {
   margin-bottom: 3.5rem;
   color: #666;
 }
+
+
+.testimonial__author {
+  margin-left: 3rem;
+  font-style: normal;
+
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  column-gap: 2rem;
+}
