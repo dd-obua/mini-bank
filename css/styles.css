@@ -245,3 +245,8 @@ h4 {
   width: 2.5rem;
   fill: var(--color-primary);
 }
+
+.features__header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
