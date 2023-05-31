@@ -57,3 +57,4 @@ console.log('Absolute href:', link.href);
 console.log('Relative href:', link.getAttribute('href'));
 
 // Data attributes
+console.log('Data version number:', logo.dataset.versionNumber);
