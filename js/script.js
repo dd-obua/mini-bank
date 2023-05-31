@@ -9,8 +9,9 @@ btnScrollTo.addEventListener('click', function (e) {
   const verticalOffset = window.pageYOffset;
 
   // Scroll to section 1
-  window.scrollTo(
-    s1coords.left + horizontalOffset,
-    s1coords.top + verticalOffset
-  );
+  window.scrollTo({
+    left: s1coords.left + horizontalOffset,
+    top: s1coords.top + verticalOffset,
+    behavior: 'smooth',
+  });
 });
