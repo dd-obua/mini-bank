@@ -14,3 +14,6 @@ const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 
 console.log(document.getElementsByClassName('btn'));
+
+// Create DOM elements
+const message = document.createElement('div');
