@@ -23,3 +23,10 @@ message.innerHTML =
 
 // Add elements to DOM
 header.append(message);
+
+// Delete DOM elements
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function () {
+    message.remove();
+  });
