@@ -10,3 +10,6 @@ btnScrollTo.addEventListener('click', function (e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Listen to and handle mouse enter events
+const h1 = document.querySelector('h1');
