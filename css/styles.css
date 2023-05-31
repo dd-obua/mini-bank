@@ -626,3 +626,8 @@ h4 {
   border: none;
   background: none;
 }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
