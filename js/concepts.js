@@ -42,6 +42,7 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 const logo = document.querySelector('.nav__logo');
 console.log('alt:', logo.alt);
 console.log('src:', logo.src);
+console.log('src:', logo.getAttribute('src'));
 console.log('class:', logo.className);
 console.log('id:', logo.id);
 console.log('designer:', logo.designer);
