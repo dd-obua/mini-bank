@@ -437,3 +437,8 @@ h4 {
   background-color: #888;
   opacity: 1;
 }
+
+.testimonial {
+  width: 65%;
+  position: relative;
+}
