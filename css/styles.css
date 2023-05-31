@@ -256,3 +256,8 @@ h4 {
   margin: 12rem auto 0 auto;
   background-color: #fff;
 }
+
+.operations__tab-container {
+  display: flex;
+  justify-content: center;
+}
