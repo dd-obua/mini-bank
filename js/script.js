@@ -13,5 +13,7 @@ btnScrollTo.addEventListener('click', function (e) {
 
 // Listen to and handle mouse enter events
 const h1 = document.querySelector('h1');
-const alertH1 = () => alert('Get off me!');
+const alertH1 = function () {
+  alert('Get off me!');
+};
 h1.addEventListener('mouseenter', alertH1);
