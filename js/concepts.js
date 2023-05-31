@@ -1,7 +1,5 @@
 'use strict';
 
-const { log } = require('console');
-
 // Select elements
 console.log(document.documentElement);
 console.log(document.head);
