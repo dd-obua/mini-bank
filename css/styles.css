@@ -217,3 +217,7 @@ h4 {
   gap: 4rem;
   margin: 0 12rem;
 }
+
+.features__img {
+  width: 100%;
+}
