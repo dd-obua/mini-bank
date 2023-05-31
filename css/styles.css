@@ -347,3 +347,13 @@ h4 {
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
 }
+
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
