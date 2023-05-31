@@ -488,3 +488,7 @@ h4 {
   align-self: end;
   margin: 0;
 }
+
+.testimonial__location {
+  font-size: 1.5rem;
+}
