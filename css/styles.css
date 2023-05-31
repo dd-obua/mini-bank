@@ -91,6 +91,10 @@ p {
   color: #666;
 }
 
+button:focus {
+  outline: none;
+}
+
 img {
   transition: filter 0.5s;
 }
