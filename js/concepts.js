@@ -56,5 +56,5 @@ const link = document.querySelector('.nav__link');
 console.log('Absolute href:', link.href);
 console.log('Relative href:', link.getAttribute('href'));
 
-// Data attributes
+// Manuipulate data attributes
 console.log('Data version number:', logo.dataset.versionNumber);
