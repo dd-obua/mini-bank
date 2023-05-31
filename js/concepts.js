@@ -55,3 +55,5 @@ console.log();
 const link = document.querySelector('.nav__link');
 console.log('Absolute href:', link.href);
 console.log('Relative href:', link.getAttribute('href'));
+
+// Data attributes
