@@ -261,3 +261,8 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}
