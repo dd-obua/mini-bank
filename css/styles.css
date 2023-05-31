@@ -460,3 +460,9 @@ h4 {
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
+
+.testimonial__text {
+  font-size: 1.7rem;
+  margin-bottom: 3.5rem;
+  color: #666;
+}
