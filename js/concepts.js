@@ -45,4 +45,7 @@ console.log('src:', logo.src);
 console.log('class:', logo.className);
 console.log('id:', logo.id);
 console.log('designer:', logo.designer);
-console.log('designer:',logo.getAttribute('designer'));
+console.log('designer:', logo.getAttribute('designer'));
+
+logo.alt = 'Beautiful minimalist logo';
+logo.setAttribute('company', 'Bankist');
