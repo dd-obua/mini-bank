@@ -37,3 +37,12 @@ message.style.width = '120%';
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 12 + 'px';
 document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// Manipulate attributes
+const logo = document.querySelector('.nav__logo');
+console.log('alt:', logo.alt);
+console.log('src:', logo.src);
+console.log('class:', logo.className);
+console.log('id:', logo.id);
+console.log('designer:', logo.designer);
+console.log('designer:',logo.getAttribute('designer'));
