@@ -8,6 +8,7 @@ const selectAll = selector => document.querySelectorAll(selector);
 const btnScrollTo = select('.btn--scroll-to');
 const section1 = select('#section--1');
 
+// Scroll smoothly to section 1 on button click
 btnScrollTo.addEventListener('click', e => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
