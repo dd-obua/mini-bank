@@ -7,3 +7,4 @@ const h1 = select(document, 'h1');
 // Select and manipulate child elements
 console.log(h1.querySelectorAll('.highlight'));
 console.log(h1.childNodes);
+console.log(h1.firstChild);
