@@ -20,3 +20,4 @@ console.log(h1.parentElement);
 
 console.log(h1.closest('.header'));
 h1.closest('.header').style.background = 'var(--gradient-primary)';
+h1.closest('h1').style.background = 'var(--gradient-secondary)';
