@@ -17,6 +17,9 @@ btnScrollTo.addEventListener('click', e => {
 // Apply events delegation
 navLinks.addEventListener('click', function (e) {
   e.preventDefault();
-  const id = e.target.getAttribute('href');
-  select(id).scrollIntoView({ behavior: 'smooth' });
+
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    select(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
