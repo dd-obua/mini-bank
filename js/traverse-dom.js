@@ -8,3 +8,4 @@ const h1 = select(document, 'h1');
 console.log(h1.querySelectorAll('.highlight'));
 console.log(h1.childNodes);
 console.log(h1.firstChild);
+console.log(h1.children);
