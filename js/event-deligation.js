@@ -8,6 +8,6 @@ const selectAll = selector => document.querySelectorAll(selector);
 const btnScrollTo = select('.btn--scroll-to');
 const section1 = select('#section--1');
 
-btnScrollTo.addEventListener('click', function (e) {
+btnScrollTo.addEventListener('click', e => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
