@@ -21,3 +21,6 @@ const alertH1 = function () {
 h1.addEventListener('mouseenter', alertH1);
 
 setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// Implement event propagation (esp. event bubbling)
+const rdmInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
