@@ -27,17 +27,17 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 // Implement event propagation (esp. event bubbling)
 const rdmInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-const rdmColor = () =>
+const rdmCol = () =>
   `rgb(${rdmInt(0, 255)},${rdmInt(0, 255)},${rdmInt(0, 255)})`;
 
 select('.nav__link').addEventListener('click', function (e) {
-  this.style.background = rdmColor();
+  this.style.background = rdmCol();
   console.log('link', e.target, e.currentTarget);
   console.log(this === e.currentTarget);
 });
 
 select('.nav__links').addEventListener('click', function (e) {
-  this.style.background = rdmColor();
+  this.style.background = rdmCol();
   console.log('container', e.target, e.currentTarget);
   console.log(this === e.currentTarget);
 
@@ -45,7 +45,7 @@ select('.nav__links').addEventListener('click', function (e) {
 });
 
 select('.nav').addEventListener('click', function (e) {
-  this.style.background = rdmColor();
+  this.style.background = rdmCol();
   console.log('nav', e.target, e.currentTarget);
   console.log(this === e.currentTarget);
 });
