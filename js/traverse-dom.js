@@ -16,3 +16,4 @@ h1.lastElementChild.style.color = '#000';
 console.log();
 // Select and manipulate parents
 console.log(h1.parentNode);
+console.log(h1.parentElement);
