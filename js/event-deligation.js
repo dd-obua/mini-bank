@@ -13,11 +13,9 @@ btnScrollTo.addEventListener('click', e => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Scroll smoothly to different sections on clicking nav links
-selectAll('.nav__link').forEach(function (el, i) {
-  el.addEventListener('click', function (e) {
-    e.preventDefault();
-    const id = this.getAttribute('href');
-    select(id).scrollIntoView({ behavior: 'smooth' });
-  });
+// Apply events delegation
+select('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  const id = e.target.getAttribute('href');
+  select(id).scrollIntoView({ behavior: 'smooth' });
 });
