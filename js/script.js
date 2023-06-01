@@ -29,3 +29,21 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 const rdmInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 const rdmColor = () =>
   `rgb(${rdmInt(0, 255)},${rdmInt(0, 255)},${rdmInt(0, 255)})`;
+
+select('.nav__link').addEventListener('click', function (e) {
+  this.style.background = rdmColor();
+  console.log('link', e.target, e.currentTarget);
+  console.log(this === e.currentTarget);
+});
+
+select('.nav__links').addEventListener('click', function (e) {
+  this.style.background = rdmColor();
+  console.log('container', e.target, e.currentTarget);
+  console.log(this === e.currentTarget);
+});
+
+select('.nav').addEventListener('click', function (e) {
+  this.style.background = rdmColor();
+  console.log('nav', e.target, e.currentTarget);
+  console.log(this === e.currentTarget);
+});
