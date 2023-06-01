@@ -40,6 +40,8 @@ select('.nav__links').addEventListener('click', function (e) {
   this.style.background = rdmColor();
   console.log('container', e.target, e.currentTarget);
   console.log(this === e.currentTarget);
+
+  e.stopPropagation();
 });
 
 select('.nav').addEventListener('click', function (e) {
