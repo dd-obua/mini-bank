@@ -7,3 +7,7 @@ const selectAll = selector => document.querySelectorAll(selector);
 // Select elements
 const btnScrollTo = select('.btn--scroll-to');
 const section1 = select('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
