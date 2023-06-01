@@ -1,7 +1,10 @@
 'use strict';
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+const select = selector => document.querySelector(selector);
+const selectAll = selector => document.querySelectorAll(selector);
+
+const btnScrollTo = select('.btn--scroll-to');
+const section1 = select('#section--1');
 
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
@@ -12,7 +15,7 @@ btnScrollTo.addEventListener('click', function (e) {
 });
 
 // Listen to and handle mouse enter events
-const h1 = document.querySelector('h1');
+const h1 = select('h1');
 
 const alertH1 = function () {
   alert('Get off me!');
