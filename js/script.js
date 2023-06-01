@@ -1,7 +1,5 @@
 'use strict';
 
-const { randomInt } = require('crypto');
-
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
@@ -28,4 +26,3 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 const rdmInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 const rdmColor = () =>
   `rgb(${rdmInt(0, 255)},${rdmInt(0, 255)},${rdmInt(0, 255)})`;
- 
