@@ -12,3 +12,12 @@ const section1 = select('#section--1');
 btnScrollTo.addEventListener('click', e => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Scroll smoothly to different sections on clicking nav links
+selectAll('.nav__link').forEach(function (el, i) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    select(id).scrollIntoView({ behavior: 'smooth' });
+  });
+});
