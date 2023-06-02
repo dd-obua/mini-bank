@@ -23,3 +23,8 @@ navLinks.addEventListener('click', function (e) {
     select(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+// Build tabbed components
+const tabContainer = select('.operations__tab-container');
+const tabs = selectAll('.operations__tab');
+const tabContents = selectAll('.operations__content');
