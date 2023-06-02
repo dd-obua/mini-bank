@@ -31,6 +31,7 @@ const tabContents = selectAll('.operations__content');
 
 tabContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
+  if (!clicked) return;
   tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
   clicked.classList.add('operations__tab--active');
 });
