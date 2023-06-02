@@ -28,3 +28,7 @@ navLinks.addEventListener('click', function (e) {
 const tabContainer = select('.operations__tab-container');
 const tabs = selectAll('.operations__tab');
 const tabContents = selectAll('.operations__content');
+
+tabContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+});
