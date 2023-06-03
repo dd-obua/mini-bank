@@ -11,7 +11,8 @@ const navLinks = select(document, '.nav__links');
 const nav = select(document, '.nav');
 
 // Scroll smoothly to section 1 on clicking learn more button
-btnScrollTo.addEventListener('click', e => {
+btnScrollTo.addEventListener('click', event => {
+  event.preventDefault();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
