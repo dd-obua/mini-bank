@@ -59,10 +59,6 @@ const handleHover = function (event, opacityValue) {
   }
 };
 
-nav.addEventListener('mouseover', function (e) {
-  handleHover(e, 0.5);
-});
+nav.addEventListener('mouseover', e => handleHover(e, 0.5));
 
-nav.addEventListener('mouseout', function (e) {
-  handleHover(e, 1);
-});
+nav.addEventListener('mouseout', e => handleHover(e, 1));
