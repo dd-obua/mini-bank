@@ -58,3 +58,11 @@ const handleHover = function (event, opacityValue) {
     logo.style.opacity = opacityValue;
   }
 };
+
+nav.addEventListener('mouseover', function (e) {
+  handleHover(e, 0.5);
+});
+
+nav.addEventListener('mouseout', function (e) {
+  handleHover(e, 1);
+});
