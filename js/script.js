@@ -46,19 +46,18 @@ tabContainer.addEventListener('click', function (e) {
 });
 
 // Fade navigation components
-const handleHover = function (event, opacityValue) {
+const handleHover = function (event) {
   if (event.target.classList.contains('nav__link')) {
     const link = event.target;
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     const logo = link.closest('.nav').querySelector('img');
 
     siblings.forEach(el => {
-      if (el !== link) el.style.opacity = opacityValue;
+      if (el !== link) el.style.opacity = this;
     });
-    logo.style.opacity = opacityValue;
+    logo.style.opacity = this;
   }
 };
 
-nav.addEventListener('mouseover', e => handleHover(e, 0.5));
-
-nav.addEventListener('mouseout', e => handleHover(e, 1));
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
