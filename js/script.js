@@ -17,11 +17,11 @@ btnScrollTo.addEventListener('click', event => {
 });
 
 // Apply events delegation
-navLinks.addEventListener('click', function (e) {
-  e.preventDefault();
+navLinks.addEventListener('click', function (event) {
+  event.preventDefault();
 
-  if (e.target.classList.contains('nav__link')) {
-    const id = e.target.getAttribute('href');
+  if (event.target.classList.contains('nav__link')) {
+    const id = event.target.getAttribute('href');
     select(document, id).scrollIntoView({ behavior: 'smooth' });
   }
 });
@@ -32,7 +32,7 @@ const tabs = selectAll(document, '.operations__tab');
 const tabContents = selectAll(document, '.operations__content');
 
 tabContainer.addEventListener('click', function (e) {
-  const clicked = e.target.closest('.operations__tab');
+  const clicked = event.target.closest('.operations__tab');
   if (!clicked) return;
   tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
   clicked.classList.add('operations__tab--active');
