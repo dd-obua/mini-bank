@@ -58,3 +58,5 @@ nav.addEventListener('mouseover', function (e) {
     logo.style.opacity = 0.5;
   }
 });
+
+nav.addEventListener('mouseout', function (e) {});
