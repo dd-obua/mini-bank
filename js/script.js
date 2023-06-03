@@ -62,3 +62,6 @@ const handleHover = function (event) {
 
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
+
+// Create sticky navigation bar
+const inititalCoords = section1.getBoundingClientRect();
