@@ -8,6 +8,7 @@ const selectAll = selector => document.querySelectorAll(selector);
 const btnScrollTo = select('.btn--scroll-to');
 const section1 = select('#section--1');
 const navLinks = select('.nav__links');
+const nav = select('.nav');
 
 // Scroll smoothly to section 1 on clicking learn more button
 btnScrollTo.addEventListener('click', e => {
@@ -42,3 +43,5 @@ tabContainer.addEventListener('click', function (e) {
     'operations__content--active'
   );
 });
+
+// Fade navigation components
