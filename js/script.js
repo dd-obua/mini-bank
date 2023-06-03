@@ -46,4 +46,7 @@ tabContainer.addEventListener('click', function (e) {
 });
 
 // Fade navigation components
-nav.addEventListener('mouseover', function (e) {});
+nav.addEventListener('mouseover', function (e) {
+  if (e.target.classList.contains('nav__link')) {
+  }
+});
