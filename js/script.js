@@ -1,8 +1,8 @@
 'use strict';
 
 // Create selectors
-const select = (el, sel) => el.querySelector(sel);
-const selectAll = (el, sel) => el.querySelectorAll(sel);
+const select = (element, selector) => element.querySelector(selector);
+const selectAll = (element, selector) => element.querySelectorAll(selector);
 
 // Select elements
 const btnScrollTo = select(document, '.btn--scroll-to');
