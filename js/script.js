@@ -67,13 +67,13 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 // Create sticky navigation bar
 const navHeight = nav.getBoundingClientRect().height;
 
-const fixNav = function (entries) {
+const createFixedNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 };
 
-const headerObserver = new IntersectionObserver(fixNav, {
+const headerObserver = new IntersectionObserver(createFixedNav, {
   root: null,
   threshold: 0,
   rootMargin: `-${navHeight}px`,
