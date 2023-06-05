@@ -9,6 +9,7 @@ const btnScrollTo = select(document, '.btn--scroll-to');
 const section1 = select(document, '#section--1');
 const navLinks = select(document, '.nav__links');
 const nav = select(document, '.nav');
+const header = select(document, '.header');
 
 // Scroll smoothly to section 1 on clicking learn more button
 btnScrollTo.addEventListener('click', event => {
@@ -64,8 +65,3 @@ nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
 // Create sticky navigation bar
-const initialCoords = section1.getBoundingClientRect();
-window.addEventListener('scroll', function () {
-  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-});
