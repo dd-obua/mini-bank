@@ -37,8 +37,8 @@ tabContainer.addEventListener('click', function (event) {
   tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
   clicked.classList.add('operations__tab--active');
 
-  tabContents.forEach(cont =>
-    cont.classList.remove('operations__content--active')
+  tabContents.forEach(content =>
+    content.classList.remove('operations__content--active')
   );
   select(
     document,
