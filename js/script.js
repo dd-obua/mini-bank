@@ -65,6 +65,8 @@ nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
 // Create sticky navigation bar
+const navHeight = nav.getBoundingClientRect().height;
+
 const fixNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) nav.classList.add('sticky');
