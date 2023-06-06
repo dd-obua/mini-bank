@@ -87,6 +87,7 @@ const revealSection = function (entries, observer) {
   const currentSection = entry.target;
   if (!entry.isIntersecting) return;
   currentSection.classList.remove('section--hidden');
+  sectionObserver.unobserve(currentSection);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
