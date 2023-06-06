@@ -12,7 +12,7 @@ const nav = select(document, '.nav');
 const header = select(document, '.header');
 
 // Scroll smoothly to section 1 on clicking learn more button
-btnScrollTo.addEventListener('click', event => {
+btnScrollTo.addEventListener('click', function (event) {
   event.preventDefault();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
