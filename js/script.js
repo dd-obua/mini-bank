@@ -102,3 +102,8 @@ allSections.forEach(function (section) {
 });
 
 // Implement lazy loading images
+const imgObserver = new IntersectionObserver(loadImage, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px',
+});
