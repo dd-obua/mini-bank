@@ -106,6 +106,10 @@ const loadImage = function (entries, imgObserver) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener('load', function () {
+    return entry.target.classList.remove('lazy-img');
+  });
 };
 
 const imgObserver = new IntersectionObserver(loadImage, {
