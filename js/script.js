@@ -102,6 +102,12 @@ allSections.forEach(function (section) {
 });
 
 // Implement lazy loading images
+const loadImage = function (entries, imgObserver) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+};
+
 const imgObserver = new IntersectionObserver(loadImage, {
   root: null,
   threshold: 0,
