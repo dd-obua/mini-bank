@@ -11,6 +11,7 @@ const navLinks = select(document, '.nav__links');
 const nav = select(document, '.nav');
 const header = select(document, '.header');
 const allSections = selectAll(document, '.section');
+const imgTargets = selectAll(document, 'img[data-src]');
 
 // Scroll smoothly to section 1 on clicking learn more button
 btnScrollTo.addEventListener('click', function (event) {
@@ -99,3 +100,5 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+// Implement lazy loading images
