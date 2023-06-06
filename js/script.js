@@ -82,6 +82,13 @@ const headerObserver = new IntersectionObserver(createFixedNav, {
 headerObserver.observe(header);
 
 // Reveal sections
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  const currentSection = entry.target;
+  if (!entry.isIntersecting) return;
+  currentSection.classList.remove('section--hidden');
+};
+
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.15,
