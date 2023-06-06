@@ -10,6 +10,7 @@ const section1 = select(document, '#section--1');
 const navLinks = select(document, '.nav__links');
 const nav = select(document, '.nav');
 const header = select(document, '.header');
+const allSections = selectAll(document, '.section');
 
 // Scroll smoothly to section 1 on clicking learn more button
 btnScrollTo.addEventListener('click', function (event) {
@@ -79,3 +80,9 @@ const headerObserver = new IntersectionObserver(createFixedNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+// Reveal sections
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
