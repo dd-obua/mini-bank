@@ -136,7 +136,6 @@ const createDots = function () {
     );
   });
 };
-createDots();
 
 const activateSlideBtn = function (btnNo) {
   selectAll('.dots__dot').forEach(dot =>
@@ -155,8 +154,6 @@ const goToSlide = function (slideNo) {
   activateSlideBtn(slideNo);
 };
 
-goToSlide(0);
-
 const nextSlide = function () {
   if (curSlideNo === lastSlideNo) curSlideNo = 0;
   else curSlideNo++;
@@ -168,6 +165,12 @@ const prevSlide = function () {
   else curSlideNo--;
   goToSlide(curSlideNo);
 };
+
+const init = function () {
+  createDots();
+  goToSlide(0);
+};
+init();
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
