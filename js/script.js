@@ -138,11 +138,21 @@ const createDots = function () {
 };
 createDots();
 
+const activateSlideBtn = function (slideNo) {
+  selectAll('.dots__dot').forEach(dot =>
+    dot.classList.remove('dots__dot--active')
+  );
+  select(`.dots__dot[data-slide="${slideNo}"]`).classList.add(
+    'dots__dot--active'
+  );
+};
+
 const goToSlide = function (slideNo) {
   slides.forEach(
     (slide, index) =>
       (slide.style.transform = `translateX(${100 * (index - slideNo)}%)`)
   );
+  activateSlideBtn(slideNo);
 };
 
 goToSlide(0);
