@@ -121,12 +121,22 @@ const imgObserver = new IntersectionObserver(loadImage, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
-// Implement sliding functionality
 const slides = selectAll('.slide');
 const btnLeft = select('.slider__btn--left');
 const btnRight = select('.slider__btn--right');
 let curSlideNo = 0;
 const lastSlideNo = slides.length - 1;
+const dotContainer = select('.dots');
+
+const createDots = function () {
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots__dot" data-slide="${i}"></button>`
+    );
+  });
+};
+createDots();
 
 const goToSlide = function (slideNo) {
   slides.forEach(
@@ -152,7 +162,6 @@ const prevSlide = function () {
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
 
-// Implement sliding with arrow keys
 document.addEventListener('keydown', function (event) {
   event.key === 'ArrowRight' && nextSlide();
   event.key === 'ArrowLeft' && prevSlide();
