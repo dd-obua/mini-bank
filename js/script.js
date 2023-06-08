@@ -128,16 +128,14 @@ const btnRight = select('.slider__btn--right');
 let curSlideNo = 0;
 const lastSlideNo = slides.length - 1;
 
-slides.forEach(
-  (slide, index) => (slide.style.transform = `translateX(${100 * index}%)`)
-);
-
 const goToSlide = function (slideNo) {
   slides.forEach(
     (slide, index) =>
       (slide.style.transform = `translateX(${100 * (index - slideNo)}%)`)
   );
 };
+
+goToSlide(0);
 
 btnRight.addEventListener('click', function () {
   if (curSlideNo === lastSlideNo) curSlideNo = 0;
