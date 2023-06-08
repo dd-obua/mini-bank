@@ -137,14 +137,17 @@ const goToSlide = function (slideNo) {
 
 goToSlide(0);
 
-btnRight.addEventListener('click', function () {
+const nextSlide = function () {
   if (curSlideNo === lastSlideNo) curSlideNo = 0;
   else curSlideNo++;
   goToSlide(curSlideNo);
-});
+};
 
-btnLeft.addEventListener('click', function () {
+const prevSlide = function () {
   if (curSlideNo === 0) curSlideNo = lastSlideNo;
   else curSlideNo--;
   goToSlide(curSlideNo);
-});
+};
+
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
