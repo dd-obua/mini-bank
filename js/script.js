@@ -123,6 +123,9 @@ imgTargets.forEach(img => imgObserver.observe(img));
 
 // Implement sliding functionality
 const slides = selectAll('.slide');
+const btnLeft = select('.slider__btn--left');
+const btnRight = select('.slider__btn--right');
+
 slides.forEach(
   (slide, index) => (slide.style.transform = `translateX(${100 * index}%)`)
 );
