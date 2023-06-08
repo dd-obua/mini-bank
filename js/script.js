@@ -144,3 +144,9 @@ btnRight.addEventListener('click', function () {
   else curSlideNo++;
   goToSlide(curSlideNo);
 });
+
+btnLeft.addEventListener('click', function () {
+  if (curSlideNo === 0) curSlideNo = lastSlideNo;
+  else curSlideNo--;
+  goToSlide(curSlideNo);
+});
