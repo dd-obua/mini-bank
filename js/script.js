@@ -133,12 +133,16 @@ slides.forEach(
   (slide, index) => (slide.style.transform = `translateX(${100 * index}%)`)
 );
 
-btnRight.addEventListener('click', function () {
-  if (curSlideNo === lastSlideNo) curSlideNo = 0;
-  else curSlideNo++;
-
+const goToSlide = function (slideNo) {
   slides.forEach(
     (slide, index) =>
       (slide.style.transform = `translateX(${100 * (index - curSlideNo)}%)`)
   );
+};
+
+btnRight.addEventListener('click', function () {
+  if (curSlideNo === lastSlideNo) curSlideNo = 0;
+  else curSlideNo++;
+
+  goToSlide(curSlideNo);
 });
