@@ -1,17 +1,17 @@
 'use strict';
 
 // Create selectors
-const select = (element, selector) => element.querySelector(selector);
-const selectAll = (element, selector) => element.querySelectorAll(selector);
+const select = selector => document.querySelector(selector);
+const selectAll = selector => document.querySelectorAll(selector);
 
 // Select elements
-const btnScrollTo = select(document, '.btn--scroll-to');
-const section1 = select(document, '#section--1');
-const navLinks = select(document, '.nav__links');
-const nav = select(document, '.nav');
-const header = select(document, '.header');
-const allSections = selectAll(document, '.section');
-const imgTargets = selectAll(document, 'img[data-src]');
+const btnScrollTo = select('.btn--scroll-to');
+const section1 = select('#section--1');
+const navLinks = select('.nav__links');
+const nav = select('.nav');
+const header = select('.header');
+const allSections = selectAll('.section');
+const imgTargets = selectAll('img[data-src]');
 
 // Scroll smoothly to section 1 on clicking learn more button
 btnScrollTo.addEventListener('click', function (event) {
@@ -25,14 +25,14 @@ navLinks.addEventListener('click', function (event) {
 
   if (event.target.classList.contains('nav__link')) {
     const id = event.target.getAttribute('href');
-    select(document, id).scrollIntoView({ behavior: 'smooth' });
+    select(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
 
 // Build tabbed components
-const tabContainer = select(document, '.operations__tab-container');
-const tabs = selectAll(document, '.operations__tab');
-const tabContents = selectAll(document, '.operations__content');
+const tabContainer = select('.operations__tab-container');
+const tabs = selectAll('.operations__tab');
+const tabContents = selectAll('.operations__content');
 
 tabContainer.addEventListener('click', function (event) {
   const clicked = event.target.closest('.operations__tab');
@@ -43,10 +43,9 @@ tabContainer.addEventListener('click', function (event) {
   tabContents.forEach(content =>
     content.classList.remove('operations__content--active')
   );
-  select(
-    document,
-    `.operations__content--${clicked.dataset.tab}`
-  ).classList.add('operations__content--active');
+  select(`.operations__content--${clicked.dataset.tab}`).classList.add(
+    'operations__content--active'
+  );
 });
 
 // Fade navigation components
