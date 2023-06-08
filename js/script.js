@@ -151,3 +151,9 @@ const prevSlide = function () {
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
+
+// Implement sliding with arrow keys
+document.addEventListener('keydown', function (event) {
+  event.key === 'ArrowRight' && nextSlide();
+  event.key === 'ArrowLeft' && prevSlide();
+});
