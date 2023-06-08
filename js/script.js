@@ -121,6 +121,7 @@ const imgObserver = new IntersectionObserver(loadImage, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
+// Implement slide functionality
 const slides = selectAll('.slide');
 const btnLeft = select('.slider__btn--left');
 const btnRight = select('.slider__btn--right');
