@@ -125,9 +125,10 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = selectAll('.slide');
 const btnLeft = select('.slider__btn--left');
 const btnRight = select('.slider__btn--right');
+const dotContainer = select('.dots');
+
 let curSlideNo = 0;
 const lastSlideNo = slides.length - 1;
-const dotContainer = select('.dots');
 
 const createDots = function () {
   slides.forEach(function (_, i) {
