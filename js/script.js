@@ -138,11 +138,11 @@ const createDots = function () {
 };
 createDots();
 
-const activateSlideBtn = function (slideNo) {
+const activateSlideBtn = function (btnNo) {
   selectAll('.dots__dot').forEach(dot =>
     dot.classList.remove('dots__dot--active')
   );
-  select(`.dots__dot[data-slide="${slideNo}"]`).classList.add(
+  select(`.dots__dot[data-slide="${btnNo}"]`).classList.add(
     'dots__dot--active'
   );
 };
