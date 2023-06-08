@@ -125,7 +125,6 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = selectAll('.slide');
 const btnLeft = select('.slider__btn--left');
 const btnRight = select('.slider__btn--right');
-
 let curSlideNo = 0;
 const lastSlideNo = slides.length - 1;
 
@@ -143,6 +142,5 @@ const goToSlide = function (slideNo) {
 btnRight.addEventListener('click', function () {
   if (curSlideNo === lastSlideNo) curSlideNo = 0;
   else curSlideNo++;
-
   goToSlide(curSlideNo);
 });
