@@ -135,7 +135,7 @@ slides.forEach(
 const goToSlide = function (slideNo) {
   slides.forEach(
     (slide, index) =>
-      (slide.style.transform = `translateX(${100 * (index - curSlideNo)}%)`)
+      (slide.style.transform = `translateX(${100 * (index - slideNo)}%)`)
   );
 };
 
