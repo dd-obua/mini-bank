@@ -120,3 +120,6 @@ const imgObserver = new IntersectionObserver(loadImage, {
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
+
+// Implement sliding functionality
+const slides = selectAll('.slide');
