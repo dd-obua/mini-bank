@@ -166,3 +166,10 @@ document.addEventListener('keydown', function (event) {
   event.key === 'ArrowRight' && nextSlide();
   event.key === 'ArrowLeft' && prevSlide();
 });
+
+dotContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('dots__dot')) {
+    const { slide } = event.target.dataset;
+    goToSlide(slide);
+  }
+});
